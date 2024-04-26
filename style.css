@@ -1,0 +1,118 @@
+body,
+htm {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+
+}
+
+.espaço {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(ellipse at bottom,
+            #1B2735 0%, #090A0F 100%);
+}
+
+.sol {
+    width: 250px;
+    height: 250px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #FFF,
+        0 0 12px #FF0,
+        0 0 24px #c27f03;
+}
+
+.terra-lua-container {
+    position: absolute;
+    width: 0;
+    height: 0;
+    animation: orbitaTerra 30s linear infinite;
+    z-index: 2;
+}
+
+.terra {
+    width: 30px;
+    height: 30px;
+    background-color: #1E90FF;
+    border-radius: 50%;
+    position: absolute;
+    left: 260px;
+    box-shadow: 0 0 12px #61adfa,
+        0 0 2px #FFF;
+
+}
+
+.lua-orbita {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: -5px;
+    animation: orbitaLua 3s linear infinite;
+}
+
+.lua {
+    width: 10px;
+    height: 10px;
+    background-color: #CCC;
+    position: absolute;
+    border-radius: 50%;
+    left: 25px;
+    top: 12.5px;
+    margin: 5px;
+    box-shadow: 0 0 6px #000;
+}
+
+@keyframes orbitaTerra {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbitaLua {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .sol {
+        align-items: center;
+        justify-content: center;
+      
+        width: 120px;
+        height: 120px;
+
+    }
+
+    .terra {
+        width: 25px;
+        height: 25px;
+        left: 115px;
+
+    }
+
+    .lua {
+        width: 6px;
+        height: 6px;
+    }
+
+}
